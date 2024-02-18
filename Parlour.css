@@ -4,33 +4,47 @@
   box-sizing: border-box;
 }
 
-.Navbar {
-  width: 100%;
-  height: 50px;
-  background-color: gainsboro;
+/* Header Styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.Navbar ul {
-  list-style-type: none;
-  margin:0;
-  padding:0;
-  overflow: hidden;
-  background-color: lightgreen;
+.logo img {
+  height: 60px;
+  width: 50px;
 }
 
-.Navbar ul li {
-  float: left;
-}
-
-.Navbar ul li a {
-  display: block;
-  color: black;
-  font-size: 20px;
+#home {
+  background-image: url('Background.jpg'); /* Add the path to your background image */
+  background-size: cover;
+  color: #fff;
   text-align: center;
-  text-decoration: none;
+  padding: 100px 20px;
 }
 
-.Navbar ul li a:hover {
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+  padding: 1rem;
+  justify-content: space-around;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+ul li a:hover {
   color: tomato;
 }
 
@@ -75,28 +89,30 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
-.carousel-inner{
-  height: 50%;;
+
+.carousel-inner {
+  height: 50%;
   width: 25%;
   margin-top: 20px;
   display: block;
 }
-.menu-category{
-      margin-top: 2.5%;
-    }
-     .menu-category img{
-        height: 40rem;
-        width: 18rem;
-        padding: 5px;
-        align-items: center;
-       
-      }
 
-.footer{
+.menu-category {
+  margin-top: 2.5%;
+}
+
+.menu-category img {
+  height: 40rem;
+  width: 18rem;
+  padding: 5px;
+  align-items: center;
+}
+
+.footer {
   margin-top: 75px;
 }
 
-.foot-panel1{
+.foot-panel1 {
   background-color: #37475a;
   color: white;
   height: 50px;
@@ -104,119 +120,145 @@
   justify-content: center;
   align-items: center;
   font-size: 0.85rem;
-
 }
 
-.foot-panel2{
-  background:#222f3d;
+.foot-panel2 {
+  background: #222f3d;
   color: white;
   height: 300px;
   display: flex;
   justify-content: space-evenly;
+}
+
+ul {
+  margin-top: 20px;
+}
+
+ul a {
+  display: block;
+  font-size: 0.85rem;
+  margin-top: 10px;
+  color: #dddddd;
+}
+
+.foot-panel3 {
+  background: #222f3d;
+  color: white;
+  border-top: 0.5px solid white;
+  height: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  background-image: url("amazon_logo.png");
+  background-size: cover;
+  height: 50px;
+  width: 100%;
+}
+
+.foot-panel4 {
+  background-color: #0f1111;
+  color: white;
+  height: 100px;
+  display: flex;
+}
+
+.pages {
+  padding-top: 25px;
+}
+
+.copyright {
+  padding-top: 25px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-image: url('Contactimg.jpg');
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form input[type="Date"],
+form button[type="submit"],
+form button[type="reset"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+form input[type="radio"] {
+  margin-right: 5px;
+}
+
+form button[type="submit"],
+form button[type="reset"] {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button[type="submit"]:hover,
+form button[type="reset"]:hover {
+  background-color: #45a049;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-category img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+    padding: 10px;
   }
 
-  ul {
-    margin-top: 20px;
+  nav ul {
+    flex-direction: column;
+    align-items: center;
   }
 
-  ul a{
-      display: block;
-      font-size: 0.85rem;
-      margin-top: 10px;
-      color: #dddddd;
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .carousel-inner {
+    width: 100%;
   }
 
-  .foot-panel3 {
-      background: #222f3d;
-      color: white;
-      border-top: 0.5px solid white;
-      height: 68px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  .menu-category img {
+    height: auto;
+    width: 100%;
   }
-
-  .logo{
-      background-image: url("amazon_logo.png");
-      background-size: cover;
-      height: 50px;
-      width: 100%;
-  }
-  .foot-panel4{
-      background-color:#0f1111 ;
-      color: white;
-      height: 100px;
-      display: flex;
-
-  }
-  .pages{
-      padding-top: 25px;
-
-  }
-
-  .copyright{
-      padding-top: 25px;
-        }
-
-        body {
-          font-family: Arial, sans-serif;
-          margin: 0;
-          padding: 20px;
-          background-color: #f0f0f0;
-      }
-      
-      h1 {
-          text-align: center;
-          margin-bottom: 20px;
-      }
-      
-      form {
-          max-width: 500px;
-          margin: 0 auto;
-          background-color: #fff;
-          padding: 20px;
-          border-radius: 5px;
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-          background-image:url('Contactimg.jpg') ;
-      }
-      
-      form input[type="text"],
-      form input[type="number"],
-      form input[type="email"],
-      form input[type="Date"],
-      form button[type="submit"],
-      form button[type="reset"] {
-          width: 100%;
-          padding: 10px;
-          margin-bottom: 15px;
-          border: 1px solid #ccc;
-          border-radius: 5px;
-          box-sizing: border-box;
-      }
-      
-      form input[type="radio"] {
-          margin-right: 5px;
-      }
-      
-      form button[type="submit"],
-      form button[type="reset"] {
-          background-color: #4caf50;
-          color: #fff;
-          border: none;
-          border-radius: 5px;
-          padding: 10px 20px;
-          cursor: pointer;
-          transition: background-color 0.3s;
-      }
-      
-      form button[type="submit"]:hover,
-      form button[type="reset"]:hover {
-          background-color: #45a049;
-      }
-      
-      @media screen and (max-width: 600px) {
-          form {
-              width: 90%;
-          }
-      }
-      
+}
