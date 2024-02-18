@@ -8,20 +8,50 @@
 
 </head>
 <body>
-    <h>Welcome to you our Contact Page </h>
-    <form>
+    <h1>Welcome to you our Contact Page</h1>
+    <form id="contactForm">
         First Name<input type="text" id="Fname">
-        Middle Name<input type="text"id="Mname">
-        Last Name<input type="text"id="Lname">
-        Mob Number<input type="number"id=Mnumber>
+        Middle Name<input type="text" id="Mname">
+        Last Name<input type="text" id="Lname">
+        Mob Number<input type="number" id="Mnumber">
         Email id<input type="email" id="Email">
         Enquiry type :
-        Normal<input type="radio" name="enquiry">
-        Special<input type="radio" name="enquiry"> 
-        Date<input type ="Date" id ="date">
+        Normal<input type="radio" name="enquiry" value="Normal">
+        Special<input type="radio" name="enquiry" value="Special"> 
+        Date<input type="date" id="date">
         <button type="submit">Submit</button>
-        <button type="Cancel">Cancel</button>
-
+        <button type="button" id="cancelButton">Cancel</button>
     </form>
+
+    <script>
+        // Function to handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Retrieve form values
+            var firstName = document.getElementById('Fname').value;
+            var middleName = document.getElementById('Mname').value;
+            var lastName = document.getElementById('Lname').value;
+            var mobNumber = document.getElementById('Mnumber').value;
+            var email = document.getElementById('Email').value;
+            var enquiryType = document.querySelector('input[name="enquiry"]:checked').value;
+            var date = document.getElementById('date').value;
+
+            // Display form data (You can modify this part to handle form submission as needed)
+            console.log("First Name: " + firstName);
+            console.log("Middle Name: " + middleName);
+            console.log("Last Name: " + lastName);
+            console.log("Mobile Number: " + mobNumber);
+            console.log("Email: " + email);
+            console.log("Enquiry Type: " + enquiryType);
+            console.log("Date: " + date);
+        });
+
+        // Function to handle cancel button click
+        document.getElementById('cancelButton').addEventListener('click', function() {
+            // Reset form fields
+            document.getElementById('contactForm').reset();
+        });
+    </script>
 </body>
 </html>
